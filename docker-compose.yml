@@ -1,0 +1,21 @@
+services:
+    postgres:
+        image: postgres
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: secret_pass
+            POSTGRES_DB: quizsite
+    backend:
+        image: quiz-backend
+        build: ./backend
+        ports:
+            - 9595:9595
+        environment:
+            PORT: 9595
+            DATABASE_URL: postgres://root:secret_pass@postgres:5432/quizsite #Used for express session
+            PGDATABASE: quizsite
+            PGHOST: postgres
+            PGUSER: root
+            PGPASSWORD: secret_pass
+        depends_on: 
+            - postgres

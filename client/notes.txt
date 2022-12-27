@@ -1,0 +1,12 @@
+colors:
+#d48166 primary
+#373a36 secondary
+#e6e2dd neutral
+
+
+icon:
+https://www.svgrepo.com/svg/193836/test
+
+
+folder structure - intermidiate:
+https://blog.webdevsimplified.com/2022-07/react-folder-structure/
